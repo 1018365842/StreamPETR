@@ -1,0 +1,20 @@
+{
+"version": "0.2.0",
+"configurations": [
+    {
+        "name": "Python: ./tools/test.py",
+        "type": "python",
+        "pythonPath": "/root/miniconda3/envs/petr/bin/python3.8",
+        "request": "launch",
+        "program": "tools/test.py",
+        "console": "integratedTerminal",
+        // "cwd": "${workspaceRoot}",
+        "justMyCode": true,
+        "args":["projects/configs/StreamPETR/stream_petr_vov_flash_800_bs2_seq_24e_test.py",
+                "ckpts/stream_petr_vov_flash_800_bs2_seq_24e/stream_petr_vov_flash_800_bs2_seq_24e.pth",
+                "--eval","bbox","--out","results/pts_bbox/results_nusc.pkl",
+                "--show","--show-dir","result"]
+    }
+]
+
+}
